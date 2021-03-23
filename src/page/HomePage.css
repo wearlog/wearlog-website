@@ -1,0 +1,309 @@
+.Teaser {
+    margin-bottom: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Teaser-Text {
+    font-size: 28px;
+    background: linear-gradient(90deg,#BA067D, #56053C);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    font-family: Nunito;
+    font-weight: bold;
+    line-height: 38px;
+    margin-bottom: 2%;
+    padding-right: 3%;
+}
+
+.Page {
+  display: flex;
+  height: 100%;  
+  align-items: center;
+  padding-top: 15px;
+}
+.Page.odd {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+.Page.even {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.Video-Container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.Video {
+  height: 502px;
+  object-fit: cover;
+  height: 505px;
+  width: 245px;
+  border-radius: 29px;
+  position: relative;
+  bottom: -15px;
+  margin-bottom: 5px;
+}
+
+.Phone {
+  position: relative;
+  animation: phone 2s;
+  animation-fill-mode: forwards;
+}
+.Header-Phone-Shadow {
+  position: relative;
+  animation: phone 2s;
+}
+@keyframes phone {
+  0% { left: -540px; }
+  100% { left: 0px; }
+}
+
+.Description {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.Description-Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: description 2s;
+}
+@keyframes description {
+  0% { right: -470px; }
+  100% { right: 0; }
+}
+
+.Title-Container {
+  display: flex;
+  align-items: baseline;
+}
+.Title-Container img {
+  height: 35px;
+}
+
+.Title {
+  font-size: 30px;
+  text-align: left;
+  font-family: 'Unicorn-Calligraphy';
+  line-height: 37px;
+  display: flex;
+  align-items: baseline;
+  margin-left: 10px;
+}
+.W {
+  font-size: 50px;
+}
+
+.Content {
+  font-size: 15px;
+  max-width: 436px;
+  text-align: center;
+}
+
+.Phone-Shadow {
+  position: relative;
+}
+
+.Lines {
+  display: none;
+}
+
+.L1 {
+  bottom: -23%;
+  width: 45.95vh;
+  height: 50.76vh;
+}
+
+.L2 {
+  bottom: -20%;
+  width: 36.73vh;
+  height: 30.13vh;
+}
+
+.L3 {
+  bottom: -28%;
+  width: 38.24vh;
+  height: 42.52vh;
+}
+
+.L4 {
+  bottom: -17%;
+  width: 28.62vh;
+  height: 28.75vh;
+}
+
+.L5 {
+  bottom: -20%;
+  width: 44.98vh;
+  height: 41.27vh;
+}
+
+.L6 {
+  bottom: -11%;
+  width: 44.02vh;
+  height: 20.5vh;
+}
+
+.L7 {
+  bottom: -9%;
+  transform: rotateX(180deg);
+  width: 36.73vh;
+  height: 30.13vh;
+}
+
+.GoToTop {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #B9057C;
+  bottom: 18px;
+  right: 4.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  transform: rotate(180deg);
+}
+.GoToTop.hidden{
+  display: none;
+}
+
+/* @media only screen and (max-width: 425px) {
+    .Teaser {
+        margin-bottom: 17%;
+    }
+    .Teaser-Text {
+        font-size: 1.4rem;
+        padding-right: 0;
+    }
+    video {
+        width: 100%;
+    }
+} */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .Page.odd {
+    justify-content: center;
+  }
+  .Page.even {
+    justify-content: center;
+  }
+
+  .Title-Container img {
+    height: 60px;
+  }
+
+  .Title {
+    font-size: 45px;
+    margin-left: 25px;
+  }
+  .W {
+    font-size: 75px;
+  }
+
+  .Content {
+    font-size: 18px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .Page {
+    padding-top: 0;
+    max-width: 1440px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .Page.odd {
+    flex-direction: row;
+  }
+  .Page.even {
+    flex-direction: row;
+  }
+
+  .Video-Container {
+    position: relative;
+    top: 8.81vh;
+  }
+  .Video {
+    width: 40.5vh;
+    height: 83.4vh;
+    border-radius: 5vh;
+    bottom: 0px;
+  }
+  .Phone {
+    transform: scale(1);
+  }
+
+  .Page.odd .Description {
+    width: 50%;
+    justify-content: flex-start;
+  }
+  .Page.even .Description {
+    width: 50%;
+    justify-content: flex-end;
+  }
+
+  .Title-Container img {
+    height: 100%;
+  }
+
+  .Title {
+    font-size: 60px;
+    margin-left: 10px;
+  }
+  .W {
+    font-size: 90px;
+  }
+
+  .Content {
+    font-size: 21px;
+    margin-top: 20px;
+  }
+
+  .Lines {
+    display: flex;
+    position: absolute;
+    left: 40%
+  }
+
+  .Phone-Shadow {
+    bottom: 2.1vh;
+    width: 26.4vw;
+  }
+
+  .GoToTop {
+    width: 2.1vw;
+    height: 2.1vw;
+    border-radius: 1.1vw;
+    right: 1vw;
+  }
+  .GoToTop svg {
+    width: 0.6vw;
+    height: 0.4vw;
+  }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

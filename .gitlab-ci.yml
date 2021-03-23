@@ -1,0 +1,46 @@
+image: node:8.12
+
+stages:
+  - dev
+  - prod
+
+cache:
+  paths:
+  - node_modules/
+
+develop:
+  stage: dev
+  type: deploy
+  script:
+  - apt-get update && apt-get install nasm
+  - yarn install --production
+  - yarn build
+  - npm install -g serverless
+  - export SITE_NAME=$DEV_SITENAME
+  - export DEFAULT_TTL=$DEV_DEFAULT_TTL
+  - export HTTPS_CERT=$DEV_HTTPS_CERT
+  - serverless config credentials --provider aws --key $AWS_KEY --secret $AWS_SECRET -n puente
+  - sls deploy -v
+  only:
+  - master
+  tags:
+  - shared
+
+release:
+  stage: prod
+  type: deploy
+  script:
+  - apt-get update && apt-get install nasm
+  - yarn install
+  - yarn build
+  - npm install -g serverless
+  - export SITE_NAME=$PROD_SITENAME
+  - export DEFAULT_TTL=$PROD_DEFAULT_TTL
+  - export HTTPS_CERT=$DEV_HTTPS_CERT
+  - serverless config credentials --provider aws --key $AWS_KEY --secret $AWS_SECRET -n puente
+  - sls deploy -v --stage prod
+  only:
+  - master
+  when: manual
+  tags:
+  - shared

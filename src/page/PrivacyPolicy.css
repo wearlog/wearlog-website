@@ -1,0 +1,93 @@
+.Privacy-Policy-Page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  font-family: 'Nunito-Regular';
+}
+
+.Privacy-Policy {
+  max-width: 74%;
+}
+
+.Privacy-Policy p {
+  font-size: 12px;
+}
+
+.Lang-Container {
+  display: flex;
+  width: 90%;
+  justify-content: flex-end;
+}
+
+.Lang-Container {
+    width: 100%;
+}
+.Lang-Selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 5%;
+  right: 4%;
+}
+.Current-Lang {
+  color: #B9057C;
+  font-size: 2.21vh;
+}
+.Lang-List {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 8%;
+  top: 33.7rem;
+  background: rgba(183, 0, 121, 0.9);
+}
+.Lang-Choice {
+  font-size: 2.21vh;
+  padding: 5px 15px;
+  color: white;
+}
+.Lang-List button {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+.Lang-List button:hover {
+  opacity: 0.5;
+  color: white;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .Lang-List {
+    right: 5vw;
+    top: 64vh;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .Privacy-Policy-Page {
+    padding-top: 100px;
+    font-family: 'Nunito-Regular';
+  }
+
+  .Lang-List {
+    right: 9.91vh;
+    top: 80vh;
+  }
+
+  .Privacy-Policy p {
+    font-size: 1.4vw;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
