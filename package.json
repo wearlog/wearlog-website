@@ -2,7 +2,7 @@
   "name": "wearlog-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://wearlog.github.io/wearlog-website",
+  "homepage": "https://wearlog.com",
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.17",
     "axios": "^0.19.0",
