@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import logoWhite from '../assets/header_logo_white.png';
 import { slide as Menu } from 'react-burger-menu';
-import { closeIcon, appStore } from './SvgFiles';
+import { closeIcon, appStore, googlePlay } from './SvgFiles';
 import { thinArrowDown } from '../components/SvgFiles';
 
 const pages = [
@@ -32,6 +32,7 @@ const pages = [
 ];
 
 const appStoreLink = "https://apps.apple.com/us/app/wearlog/id1489762330";
+const playStoreLink = "https://play.google.com/store/apps/details?id=com.wearlog.mobile";
 
 class Nav extends Component {
   state = {
@@ -137,15 +138,21 @@ class Nav extends Component {
             ))
             }
             <div className="Nav-Link-Small">
-              <button onClick={() => this.setState({ isDownloadOpen: !isDownloadOpen })}>Download</button>
+              <button style={{ outline: 'none' }} onClick={() => this.setState({ isDownloadOpen: !isDownloadOpen })}>Download</button>
             </div>
             { isDownloadOpen && (
-              <div>
-                <button className="Nav-Link-Small-Download">
+              <div style={{ paddingTop: 20 }}>
+                <button className="Nav-Link-Small-Download" style={{ marginBottom: 40 }}>
                   <div className="button-icon">{appStore}</div>
-                  <a href={appStoreLink}>
-                    App Store
-                  </a>
+                    <a href={appStoreLink}>
+                      App Store
+                    </a>
+                </button>
+                <button className="Nav-Link-Small-Download">
+                  <div className="button-icon">{googlePlay}</div>
+                    <a href={playStoreLink}>
+                      Play Store
+                    </a>
                 </button>
               </div>
             )}

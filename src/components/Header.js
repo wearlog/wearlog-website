@@ -8,7 +8,7 @@ import scrollIcon from '../assets/scrollicon.png';
 import shadow from '../assets/shadow.png';
 
 const appStoreLink = "https://apps.apple.com/us/app/wearlog/id1489762330";
-const googlePlayLink = "/";
+const playStoreLink = "https://play.google.com/store/apps/details?id=com.wearlog.mobile";
 
 const Header = ({ homepage }) => {
   if (homepage) {
@@ -38,14 +38,16 @@ const Header = ({ homepage }) => {
             <div className="Header-DownloadText">Download The App</div>
             <div className="Header-DownloadButtons">
               <a href={appStoreLink} target="_blank" rel="noopener noreferrer">
-                <div className="Header-DownloadButton">
+                <div className="Header-DownloadButton" style={{ marginRight: '0.5vw'}}>
                   <div className="button-icon">{appStore}</div>
                   App Store
                 </div>
               </a>
-              <a href={googlePlayLink} className="Header-DownloadButton" style={{ display: 'none' }}>
-                <div className="button-icon">{googlePlay}</div>
-                GOOGLE PLAY
+              <a href={playStoreLink} target="_blank" rel="noopener noreferrer">
+                <div className="Header-DownloadButton">
+                  <div className="button-icon">{googlePlay}</div>
+                    Play Store
+                </div>
               </a>
             </div>
           </div>
@@ -80,10 +82,12 @@ const Header = ({ homepage }) => {
                   App Store
                 </button>
               </a>
-              <button className="Header-DownloadButton" style={{ display: 'none' }}>
-                <div className="button-icon">{googlePlay}</div>
-                GOOGLE PLAY
-              </button>
+              <a href={playStoreLink} target="_blank" rel="noopener noreferrer" style={{ marginLeft: '20px' }}>
+                <button className="Header-DownloadButton">
+                  <div className="button-icon">{googlePlay}</div>
+                  Play Store
+                </button>
+              </a>
             </div>
           </div>
         </div>

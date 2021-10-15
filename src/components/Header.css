@@ -91,6 +91,7 @@
   margin-top: 15px;
   flex-direction: column-reverse;
   padding-left: 15%;
+
 }
 .Header-DownloadButton {
   display: flex;
@@ -299,6 +300,7 @@
     margin-top: 0;
     padding-left: 0;
   }
+
   .Header.HomePage .Header-DownloadButtons {
     margin-top: 10px;
   }
